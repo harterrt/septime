@@ -1,0 +1,7 @@
+#!/bin/sh
+curl https://module.lafourchette.com/en_GB/resa/pick-date/2/10889-d34ca/54499 \
+    | jq '.["availableDateList"][]["date"]' \
+    |  paste -sd,  \
+    | sed -e "s/^/$(date) - /" \
+    >> log
+

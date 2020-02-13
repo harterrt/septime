@@ -1,0 +1,6 @@
+#!/bin/sh
+while true; do
+    date
+    ./run;
+    sleep 1200 # Wait 20m
+done
